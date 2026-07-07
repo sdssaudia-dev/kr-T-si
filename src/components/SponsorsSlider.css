@@ -1,0 +1,109 @@
+.sponsors-slider {
+  margin: 2.5rem 0;
+}
+
+.sponsors-slider .box-shadow-container {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem 0.5rem;
+}
+
+.sponsors-slider .span-border {
+  display: block;
+  width: 1px;
+  height: 80px;
+  background: #e5e7eb;
+  margin-inline-start: auto;
+}
+
+.sponsors-slider .carousel-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 200px;
+  display: flex;
+  align-items: center;
+}
+
+.sponsors-slider .carousel-track {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 200ms ease-out;
+  will-change: transform;
+}
+
+.sponsors-slider .carousel-cell {
+  flex-shrink: 0;
+  width: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sponsors-slider .carousel-cell img {
+  max-height: 48px;
+  width: auto;
+  max-width: 100px;
+  object-fit: contain;
+}
+
+.sponsors-slider .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #156595;
+  cursor: pointer;
+  z-index: 2;
+  border: none;
+}
+
+.sponsors-slider .carousel-arrow::after {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.sponsors-slider .carousel-arrow-prev {
+  inset-inline-start: -14px;
+}
+
+.sponsors-slider .carousel-arrow-prev::after {
+  transform: translate(-30%, -50%) rotate(-135deg);
+}
+
+.sponsors-slider .carousel-arrow-next {
+  inset-inline-end: -14px;
+}
+
+.sponsors-slider .carousel-arrow-next::after {
+  transform: translate(-70%, -50%) rotate(45deg);
+}
+
+.sponsors-slider .carousel-arrow-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+@media (min-width: 640px) {
+  .sponsors-slider .carousel-cell {
+    width: 123px;
+  }
+
+  .sponsors-slider .carousel-cell img {
+    max-height: 56px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sponsors-slider .span-border {
+    display: none;
+  }
+}
