@@ -22,7 +22,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import AdminRedirectListener from "./components/AdminRedirectListener";
 
 // export const api_route = "http://localhost:8080";
-export const api_route = "https://kr-t-se.onrender.com";
+export const api_route = "https://test-production-1368.up.railway.app";
 export const socket = io(api_route);
 
 export function getKeysWithTrueValue(obj) {
